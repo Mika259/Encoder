@@ -5,7 +5,6 @@ Decode and Encode Text Simply by this tools 😘
 - open directory
 '''console
 cd Encoder
-
 '''
 
 - run file
