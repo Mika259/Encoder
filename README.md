@@ -12,4 +12,7 @@ cd Encoder
 python enc.py
 ```
 <hr>
+
+- comment
+<b>suggest me a new encoder to release in this tool, i hope it realy will be right hehe</b>
 <h3>Enjoy Using it</h3>
