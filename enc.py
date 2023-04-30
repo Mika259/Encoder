@@ -1,3 +1,5 @@
+
+
 import base64
 import os
 import time
@@ -18,7 +20,7 @@ banner='''
 	     \033[34m乇几匚ㄖᗪ乇尺　ㄒ乇乂ㄒ\033[39m
 
         \033[31m[+]\033[33m https://github.com/Mika259 \033[31m[+]\033[36m	
-	--------->> version 1.0 <<--------\033[39m
+	--------->> version 1.5 <<--------\033[39m
 '''
 menu ='''\033[32m
 [+] Menu_option (select)
@@ -27,7 +29,9 @@ menu ='''\033[32m
  |_
  | [2] \033[34mbase64\033[32m
  |_
-   [3] \033[34mhash\033[32m
+ | [3] \033[34mhash\033[32m
+ |_
+   [4] \033[34mrot13\033[32m
 
 '''
 os.system('clear')
@@ -54,13 +58,15 @@ user = input("\033[33mselect >> \033[39m")
 
 def plan():
         if user == '1':
-                hexOp()
+            hexOp()
         elif user == '2':
-                base64Op()
+           base64Op()
         elif user == '3':
-                hash()
+           hash()
+        elif user == '4':
+            rot13()
         else:
-                print("\033[31mError Command!\033[39m")
+            print("\033[31mError Command!\033[39m")
 
 def back():
 	print(menu)
@@ -135,7 +141,42 @@ def hash():
 	# Print the hashed string
 	print(f"Hashed :\n{hashed_text}");home()
 
+def enRot13():
+	# define the ROT13 alphabet mapping
+	rot13_mapping = str.maketrans(
+	    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
+	    "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm"
+	)
+	# get the input string from the user
+	input_string = input("\nEnter string to encrypt :")
+	# encrypt the string using ROT13
+	encrypted_string = input_string.translate(rot13_mapping)
+	# display the encrypted string
+	print("Encrypted string :\n", encrypted_string);home()
+
+def deRot13():
+    # define the ROT13 alphabet mapping
+    rot13_mapping = str.maketrans(
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
+    "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm"
+    )
+    # get the input string from the user
+    encrypted_string = input("\nEnter ROT13-encrypted string :")
+    # decrypt the string using ROT13
+    decrypted_string = encrypted_string.translate(rot13_mapping)
+    # display the decrypted string
+    print("Decrypted string :\n", decrypted_string);home()
+
+
+def rot13():
+    usrOp3 = input("[1] Encrypt into rot13 / [2] Decrypt into Text : ")
+    if usrOp3 == '1':
+        enRot13()
+    elif usrOp3 == '2':
+        deRot13()
 
 plan()
+
+
 #tool by mika259
 #repory if have some bugs or problems
