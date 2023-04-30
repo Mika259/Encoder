@@ -3,12 +3,12 @@ Decode and Encode Text Simply by this tools 😘
 
 #Use
 - open directory
-```shell
+```console
 cd Encoder
 ```
 
 - run file
-```shell
+```console
 python enc.py
 ```
 <hr>
