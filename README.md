@@ -12,6 +12,7 @@ cd Encoder
 python enc.py
 ```
 <hr>
+
 # Available Encode and Decode
 <ul>
   <li>Hex</li>
