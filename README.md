@@ -2,6 +2,10 @@
 Decode and Encode Text Simply by this tools 😘
 
 # Use
+- clone repository
+```console
+git clone https://github.com/mika259/encoder
+```
 - open directory
 ```console
 cd Encoder
