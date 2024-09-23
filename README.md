@@ -20,7 +20,7 @@ python enc.py
 # Available Encode and Decode
 <ul>
   <li>Hex</li>
-  <li>Hash (don't have decoder)</li>
+  <li>Hash</li>
   <li>Base64</li>
   <li>Rot13</li>
 </ul>
